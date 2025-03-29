@@ -1,0 +1,113 @@
+/* Reset de margin e padding e fonte branca */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff; /* Define a cor do texto como branco */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fundo com imagem cobrindo a tela */
+  body {
+    background: url('./img/serra.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* Container principal dividido em duas colunas */
+  .container {
+    display: flex;
+    grid-template-columns: 250px 1fr; /* Sidebar fixa + área de conteúdo flexível */
+    height: 100%;
+  }
+  
+  /* Sidebar com fundo cinza semitransparente */
+  .sidebar {
+    background: rgba(128, 128, 128, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+  }
+  
+  /* Ajuste para a logo */
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Menu: lista sem marcadores e com espaçamentos */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.3s;
+  }
+  
+  /* Cores equilibradas para cada botão do menu */
+  .menu ul li:nth-child(1) a {
+    background-color: #FFA500;
+  }
+  
+  .menu ul li:nth-child(2) a {
+    background-color: #8A9A5B;
+  }
+  
+  .menu ul li:nth-child(3) a {
+    background-color: #8B4513;
+  }
+  
+  .menu ul li:nth-child(4) a {
+    background-color: #CC9900;
+  }
+  
+  .menu ul li:nth-child(5) a {
+    background-color: #008080;
+  }
+  
+  .menu ul li a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Área de conteúdo: boxes empilhados verticalmente */
+  .content {
+    padding: 20px;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Boxes com fundo preto semitransparente e cantos arredondados */
+  .box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Títulos das seções com destaque em amarelo escuro */
+  .box h2 {
+    color: var(#CC9900);
+    margin-top: 0;
+  }
+  

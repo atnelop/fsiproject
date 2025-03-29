@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Postagem com CSS Grid</title>
+  <!-- Link para o arquivo de estilos externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Container principal que divide a tela em duas colunas -->
+  <div class="container">
+
+    <!-- Sidebar (Coluna Esquerda) -->
+    <div class="sidebar">
+      <div class="logo">
+        <!-- Logo do site -->
+        <img src="./img/logo.png" alt="Logo">
+      </div>
+
+      <!-- Menu de navegação -->
+      <nav class="menu">
+        <ul>
+          <li><a href="#ENTRADAS">ENTRADAS</a></li>
+          <li><a href="#SALADAS">SALADAS</a></li>
+          <li><a href="#PRATOS_TIPICOS">PRATOS TÍPICOS</a></li>
+          <li><a href="#ESPECIALIDADES">ESPECIALIDADES</a></li>
+          <li><a href="#INFANTIL">INFANTIL</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Área de Conteúdo (Coluna Direita) -->
+    <div class="content">
+      <!-- Cada "box" representa uma seção de postagem -->
+      <div class="box" id="RESTAURANTE">
+        <H1>ALPIN RESTAURANT</H1>
+        <H2>BAYERISCHE KÜCHE</H2>
+        <H3>CADÁRPIO ABAIXO</H3>
+      </div>
+      <div class="box" id="ENTRADAS">
+        <h2>ENTRADAS</h2>
+        <p>Croquete de carne</p>
+        <p>Steak tartar</p>
+        <p>Tartar de salmão</p>
+        <p>Patês diversos</p>
+        <p>Pão de centeio</p>              
+      </div>
+
+      <div class="box" id="SALADAS">
+        <h2>SALADAS</h2>
+        <p>Salada de pato
+            Mix de folhas, pato assado desfiado, beterraba, cenoura, molho curry e aspargos, servido numa cesta de queijo parmesão crocante.</p>
+        <p>Salada de Salmão
+            Mix de folhas, salmão defumado, beterraba, cenoura, amêndoas, aspargos e molho de maracujá, servido numa cesta de queijo parmesão crocante.</p>
+        <p>Salada de Frango
+            Mix de folhas, peito de frango grelhado, beterraba, cenoura e molho champignon, servido numa cesta de queijo parmesão crocante.</p>          
+      </div>
+
+      <div class="box" id="PRATOS TÍPICOS">
+        <h2>PRATOS TÍPICOS</h2>
+        <p>Salsicha branca com ervas</p>
+        <p>Salsichão defumado</p>
+        <p>Linguiça Nuremberg</p>
+        <p>Linguiça branca de vitela</p>
+        <p>Salsicha Frankfurter</p>
+        <p>Bolo de carne</p>
+        <p>Krakauer (salsichão bovino de 500g)</p>
+      </div>
+
+      <div class="box" id="ESPECIALIDADES">
+        <h2>ESPECIALIDADES</h2>
+        <p>Kassler
+            (carré de porco defumado)</p>
+        <p>Eisbein
+            (tradicional joelho de porco cozido)</p>
+        <p>Eisbein Defumado</p>
+        <p>Eisbein Grelhado</p>
+        <p>Pato assado</p>        
+      </div>
+
+      <div class="box" id="INFANTIL">
+        <h2>INFANTIL</h2>
+        <p>Salsichas tipo Viena, batata frita e arroz</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
