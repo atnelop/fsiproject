@@ -64,23 +64,23 @@ html, body {
   
   /* Cores equilibradas para cada botão do menu */
   .menu ul li:nth-child(1) a {
-    background-color: #FFA500;
+    background-color: #000;
   }
   
   .menu ul li:nth-child(2) a {
-    background-color: #8A9A5B;
+    background-color: #000;
   }
   
   .menu ul li:nth-child(3) a {
-    background-color: #8B4513;
+    background-color: #FFF000;
   }
   
   .menu ul li:nth-child(4) a {
-    background-color: #CC9900;
+    background-color: #FF0000;
   }
   
   .menu ul li:nth-child(5) a {
-    background-color: #008080;
+    background-color: #FF0000;
   }
   
   .menu ul li a:hover {
