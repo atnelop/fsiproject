@@ -1,0 +1,201 @@
+/* Configurações globais */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+  background: url('../img/serra.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho fixo no topo */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 5px 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.top-header h1 {
+  font-size: 1em;
+  margin: 2px 0;
+  font-family: 'Cinzel', serif;
+  color: #e8b809;
+  letter-spacing: 1px;
+}
+
+.top-header h2 {
+  font-size: 0.8em;
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  color: #e8b809;
+}
+
+/* Layout container principal */
+.container {
+  display: flex;
+  margin-top: 50px;
+  min-height: calc(100vh - 110px); /* Compensa cabeçalho e rodapé */
+  flex: 1;
+}
+
+/* Menu lateral */
+.sidebar {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 20px;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botões de idioma e sobre */
+.language-switch {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.language-switch button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  margin: 0 4px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.language-switch button:hover {
+  background-color: #555;
+}
+
+/* Logo */
+.logo img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 80%;
+}
+
+.cardapio-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Navegação lateral */
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu ul li {
+  margin-bottom: 10px;
+}
+.menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: #000;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.menu ul li:nth-child(3) a {
+  background: #e8b809;
+}
+.menu ul li:nth-child(4) a,
+.menu ul li:nth-child(5) a {
+  background: #FF0000;
+}
+.menu ul li a:hover {
+  opacity: 0.8;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Blocos de seção (ENTRADAS, SOBRE, etc.) */
+.box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título das seções */
+.box h2 {
+  font-family: 'Cinzel', serif;
+  color: #cc9900;
+  margin-top: 0;
+}
+
+/* Ocultador de seções */
+.hidden {
+  display: none !important;
+}
+
+/* Botão SOBRE */
+.about-btn {
+  background-color: #e8b809;
+  color: #000;
+  border: none;
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.about-btn:hover {
+  opacity: 0.85;
+}
+
+/* Texto da seção SOBRE */
+#about p {
+  line-height: 1.6;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-basis: auto;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .menu ul li {
+    flex: 1;
+  }
+}
