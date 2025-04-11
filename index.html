@@ -1,84 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout Postagem com CSS Grid</title>
-  <!-- Link para o arquivo de estilos externo -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALPIN RESTAURANT</title>
+
+  <!-- Estilos e fontes -->
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans&family=UnifrakturCook&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Container principal que divide a tela em duas colunas -->
+
+  <!-- Cabeçalho fixo -->
+  <header class="top-header">
+    <h1>ALPIN RESTAURANT</h1>
+    <h2>BAYERISCHE KÜCHE</h2>
+  </header>
+
+  <!-- Container principal: menu + conteúdo -->
   <div class="container">
 
-    <!-- Sidebar (Coluna Esquerda) -->
+    <!-- Menu lateral com logo e idiomas -->
     <div class="sidebar">
+      <div class="language-switch">
+        <button onclick="showAbout()" class="about-btn">📜 Sobre</button>
+        <button onclick="setLanguage('pt')">🇧🇷</button>
+        <button onclick="setLanguage('en')">🇺🇸</button>
+        <button onclick="setLanguage('de')">🇩🇪</button>
+      </div>
+
       <div class="logo">
-        <!-- Logo do site -->
-        <img src="./img/logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo" />
+        <p class="cardapio-text" data-i18n="cardapio_text">CONFIRA NOSSO CARDÁPIO</p>
       </div>
 
       <!-- Menu de navegação -->
       <nav class="menu">
         <ul>
-          <li><a href="#ENTRADAS">ENTRADAS</a></li>
-          <li><a href="#SALADAS">SALADAS</a></li>
-          <li><a href="#PRATOS_TIPICOS">PRATOS TÍPICOS</a></li>
-          <li><a href="#ESPECIALIDADES">ESPECIALIDADES</a></li>
-          <li><a href="#INFANTIL">INFANTIL</a></li>
+          <li><a href="#ENTRADAS" data-i18n="menu_entradas">ENTRADAS</a></li>
+          <li><a href="#SALADAS" data-i18n="menu_saladas">SALADAS</a></li>
+          <li><a href="#PRATOS_TIPICOS" data-i18n="menu_pratos">PRATOS TÍPICOS</a></li>
+          <li><a href="#ESPECIALIDADES" data-i18n="menu_especialidades">ESPECIALIDADES</a></li>
+          <li><a href="#INFANTIL" data-i18n="menu_infantil">INFANTIL</a></li>
         </ul>
       </nav>
     </div>
 
-    <!-- Área de Conteúdo (Coluna Direita) -->
+    <!-- Conteúdo principal -->
     <div class="content">
-      <!-- Cada "box" representa uma seção de postagem -->
-      <div class="box" id="RESTAURANTE">
-        <H1>ALPIN RESTAURANT</H1>
-        <H2>BAYERISCHE KÜCHE</H2>
-        <H3>CADÁRPIO ABAIXO</H3>
-      </div>
-      <div class="box" id="ENTRADAS">
-        <h2>ENTRADAS</h2>
-        <p>Croquete de carne</p>
-        <p>Steak tartar</p>
-        <p>Tartar de salmão</p>
-        <p>Patês diversos</p>
-        <p>Pão de centeio</p>              
+
+      <!-- Seções do cardápio -->
+      <div class="box hidden" id="ENTRADAS">
+        <h2 data-i18n="titulo_entradas">ENTRADAS</h2>
+        <p data-i18n="entrada1">Croquete de carne</p>
+        <p data-i18n="entrada2">Steak tartar</p>
+        <p data-i18n="entrada3">Tartar de salmão</p>
+        <p data-i18n="entrada4">Patês diversos</p>
+        <p data-i18n="entrada5">Pão de centeio</p>
       </div>
 
-      <div class="box" id="SALADAS">
-        <h2>SALADAS</h2>
-        <p>Salada de pato <br>Mix de folhas, pato assado desfiado, beterraba, cenoura, molho curry e aspargos, servido numa cesta de queijo parmesão crocante.</p>
-        <p>Salada de Salmão <br>Mix de folhas, salmão defumado, beterraba, cenoura, amêndoas, aspargos e molho de maracujá, servido numa cesta de queijo parmesão crocante.</p>
-        <p>Salada de Frango <br>Mix de folhas, peito de frango grelhado, beterraba, cenoura e molho champignon, servido numa cesta de queijo parmesão crocante.</p>          
+      <div class="box hidden" id="SALADAS">
+        <h2 data-i18n="titulo_saladas">SALADAS</h2>
+        <p data-i18n="salada1">Salada de pato</p>
+        <p data-i18n="salada2">Salada de Salmão</p>
+        <p data-i18n="salada3">Salada de Frango</p>
       </div>
 
-      <div class="box" id="PRATOS TÍPICOS">
-        <h2>PRATOS TÍPICOS</h2>
-        <p>Salsicha branca com ervas</p>
-        <p>Salsichão defumado</p>
-        <p>Linguiça Nuremberg</p>
-        <p>Linguiça branca de vitela</p>
-        <p>Salsicha Frankfurter</p>
-        <p>Bolo de carne</p>
-        <p>Krakauer <br>(salsichão bovino de 500g)</p>
+      <div class="box hidden" id="PRATOS_TIPICOS">
+        <h2 data-i18n="titulo_pratos">PRATOS TÍPICOS</h2>
+        <p data-i18n="prato1">Salsicha branca com ervas</p>
+        <p data-i18n="prato2">Salsichão defumado</p>
+        <p data-i18n="prato3">Linguiça Nuremberg</p>
+        <p data-i18n="prato4">Linguiça branca de vitela</p>
+        <p data-i18n="prato5">Salsicha Frankfurter</p>
+        <p data-i18n="prato6">Bolo de carne</p>
+        <p data-i18n="prato7">Krakauer (salsichão bovino de 500g)</p>
       </div>
 
-      <div class="box" id="ESPECIALIDADES">
-        <h2>ESPECIALIDADES</h2>
-        <p>Kassler <br>(carré de porco defumado)</p>
-        <p>Eisbein <br>(tradicional joelho de porco cozido)</p>
-        <p>Eisbein Defumado</p>
-        <p>Eisbein Grelhado</p>
-        <p>Pato assado</p>        
+      <div class="box hidden" id="ESPECIALIDADES">
+        <h2 data-i18n="titulo_especialidades">ESPECIALIDADES</h2>
+        <p data-i18n="esp1">Kassler (carré de porco defumado)</p>
+        <p data-i18n="esp2">Eisbein (joelho de porco cozido)</p>
+        <p data-i18n="esp3">Eisbein Defumado</p>
+        <p data-i18n="esp4">Eisbein Grelhado</p>
+        <p data-i18n="esp5">Pato assado</p>
       </div>
 
-      <div class="box" id="INFANTIL">
-        <h2>INFANTIL</h2>
-        <p>Salsichas tipo Viena, batata frita e arroz</p>
+      <div class="box hidden" id="INFANTIL">
+        <h2 data-i18n="titulo_infantil">INFANTIL</h2>
+        <p data-i18n="infantil1">Salsichas tipo Viena, batata frita e arroz</p>
       </div>
+
+      <!-- 📜 Seção SOBRE -->
+      <div class="box hidden" id="about">
+        <h2 data-i18n="about_title">🏔️ A História do Alpin Restaurant</h2>
+        <p data-i18n="about_text">
+          No coração das montanhas de Urubici, onde o frio abraça a alma e a natureza parece sussurrar tradições antigas,
+          nasceu o Alpin Restaurant — um pedaço da Baviera fincado no sul do Brasil.
+          Tudo começou com uma família de origem germânica-bávara, que há gerações trazia na bagagem mais do que sotaques
+          e receitas: trazia costumes, sabores e um jeito acolhedor de servir à mesa. Inspirados nas casas rústicas da
+          Alemanha do sul, decidiram criar um espaço onde o tempo parece desacelerar, e onde cada prato conta uma história.
+          O nome Alpin vem das lembranças dos Alpes Bávaros — montanhas que, assim como a Serra Catarinense, são imponentes,
+          frias e belas. O restaurante foi erguido com respeito às raízes e à cultura local, criando uma harmonia única
+          entre a gastronomia tradicional alemã e o cenário mágico de Urubici.
+          Aqui, cada detalhe importa. Das salsichas artesanais ao joelho de porco cozido lentamente, do pão de centeio
+          fresquinho aos pratos infantis com carinho de vó. A música ambiente, a madeira aquecida do salão, o aroma do
+          kassler defumado... tudo foi pensado para transportar você a uma típica taverna da Baviera.
+          Mais que um restaurante, o Alpin é um lugar para celebrar a cultura, aquecer o coração e criar memórias ao
+          redor da mesa.
+          Seja bem-vindo à nossa casa.
+          Willkommen.         
+        </p>
+      </div>
+
     </div>
   </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 ALPIN RESTAURANT - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
 </body>
 </html>
