@@ -12,18 +12,18 @@ menuLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
 
-    // 🔒 Oculta todas as seções (inclusive #about)
+    //  Oculta todas as seções (inclusive #about)
     boxes.forEach(box => box.classList.add('hidden'));
 
-    // 📍 Identifica o ID da seção de destino
+    // Identifica o ID da seção de destino
     const targetId = link.getAttribute('href').substring(1);
     const targetBox = document.getElementById(targetId);
 
-    // 🔓 Mostra a seção clicada
+    // Mostra a seção clicada
     if (targetBox) {
       targetBox.classList.remove('hidden');
 
-      // 🧭 Faz rolagem suave até a seção
+      // Faz rolagem suave até a seção
       const offsetTop = targetBox.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
