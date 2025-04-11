@@ -46,8 +46,7 @@ const translations = {
     prato7: "Krakauer (salsichão bovino de 500g)",
     esp1: "Kassler (carré de porco defumado)", esp2: "Eisbein (joelho de porco cozido)",
     esp3: "Eisbein Defumado", esp4: "Eisbein Grelhado", esp5: "Pato assado",
-    infantil1: "Salsichas tipo Viena, batata frita e arroz", ,
-    menu_sobre: "📜 Sobre", about_title: "🏔 A História do Alpin Restaurant",
+    infantil1: "Salsichas tipo Viena, batata frita e arroz", menu_sobre: "📜 Sobre", about_title: "🏔 A História do Alpin Restaurant",
     about_text: "No coração das montanhas de *Urubici, onde o frio abraça a alma e a natureza parece sussurrar tradições antigas, nasceu o **Alpin Restaurant* — um pedaço da *Baviera* fincado no sul do Brasil. Tudo começou com uma família de origem *germânica-bávara, que há gerações trazia na bagagem mais do que sotaques e receitas: trazia **costumes, sabores e um jeito acolhedor de servir à mesa*. Inspirados nas casas rústicas da Alemanha do sul, decidiram criar um espaço onde o tempo parece desacelerar, e onde cada prato conta uma história. O nome *Alpin* vem das lembranças dos Alpes Bávaros — montanhas que, assim como a *Serra Catarinense, são imponentes, frias e belas. O restaurante foi erguido com respeito às raízes e à cultura local, criando uma harmonia única entre a **gastronomia tradicional alemã* e o cenário mágico de Urubici. Aqui, cada detalhe importa. Das *salsichas artesanais* ao *joelho de porco cozido lentamente, do **pão de centeio fresquinho* aos *pratos infantis com carinho de vó*. A música ambiente, a madeira aquecida do salão, o aroma do kassler defumado... tudo foi pensado para transportar você a uma típica taverna da Baviera. Mais que um restaurante, o *Alpin* é um lugar para celebrar a cultura, aquecer o coração e criar memórias ao redor da mesa. Seja bem-vindo à nossa casa. *Willkommen.*"
   },
 
