@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ALPIN RESTAURANT</title>
 
-  <!-- Estilos e fontes -->
   <link rel="stylesheet" href="css/styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans&family=UnifrakturCook&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Cabeçalho fixo -->
   <header class="top-header">
     <h1>ALPIN RESTAURANT</h1>
     <h2>BAYERISCHE KÜCHE</h2>
   </header>
 
-  <!-- Container principal: menu + conteúdo -->
   <div class="container">
 
-    <!-- Menu lateral com logo e idiomas -->
     <div class="sidebar">
       <div class="language-switch">
         <button onclick="showAbout()" class="about-btn" data-i18n="menu_sobre">📜 Sobre</button>
@@ -35,22 +31,19 @@
         <p class="cardapio-text" data-i18n="cardapio_text">CONFIRA NOSSO CARDÁPIO</p>
       </div>
 
-      <!-- Menu de navegação -->
       <nav class="menu">
         <ul>
           <li><a href="#ENTRADAS" data-i18n="menu_entradas">ENTRADAS</a></li>
           <li><a href="#SALADAS" data-i18n="menu_saladas">SALADAS</a></li>
           <li><a href="#PRATOS_TIPICOS" data-i18n="menu_pratos">PRATOS TÍPICOS</a></li>
           <li><a href="#ESPECIALIDADES" data-i18n="menu_especialidades">ESPECIALIDADES</a></li>
-          <li><a href="#INFANTIL" data-i18n="menu_infantil">INFANTIL</a></li>
+          <li><a href="#INFANTIL" data-i1e8n="menu_infantil">INFANTIL</a></li>
         </ul>
       </nav>
     </div>
 
-    <!-- Conteúdo principal -->
     <div class="content">
 
-      <!-- Seções do cardápio -->
       <div class="box hidden" id="ENTRADAS">
         <h2 data-i18n="titulo_entradas">ENTRADAS</h2>
         <p data-i18n="entrada1">Croquete de carne</p>
@@ -92,8 +85,7 @@
         <p data-i18n="infantil1">Salsichas tipo Viena, batata frita e arroz</p>
       </div>
 
-      <!-- 📜 Seção SOBRE -->
-      <div class="box hidden" id="about">
+      <div class="box" id="about">
         <h2 data-i18n="about_title">🏔️ A História do Alpin Restaurant</h2>
         <p data-i18n="about_text">
           No coração das montanhas de Urubici, onde o frio abraça a alma e a natureza parece sussurrar tradições antigas,
@@ -117,12 +109,10 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
   <footer class="footer">
     <p>&copy; 2025 ALPIN RESTAURANT - Todos os direitos reservados</p>
   </footer>
 
-  <!-- Script principal -->
   <script src="js/script.js"></script>
 </body>
 </html>
